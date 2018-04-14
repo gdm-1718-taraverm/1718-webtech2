@@ -49,7 +49,7 @@ function removeBrickFromWall(color, wallNumber) {
         wall.removeChild(bricks[0]);
     }
     if(bricks.length < 1) {
-        alert('De muur is kapoet');
+        alert('De muur is volledig gesloopt');
     }
 };
 
