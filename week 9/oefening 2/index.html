@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 1- Oef 2</title>
+    <style>
+        li {list-style-type: none;
+            text-align: left;
+        }
+
+        input:valid {
+            border: lightblue;
+            background-color: lightgreen;
+        }
+
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        textarea:invalid{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ul>
+            <li>
+                <label>Welke kleur T-shirt had de mol vandaag aan?</label>
+                <input type="text" id="shirtColor" value="" required pattern="[Rr]ood|[Gg]roen|[Gg]rijs|[Zz]wart">
+            </li>
+            <li>
+                <label>Sliep de mol vannacht in de auto?</label>
+                <ul>
+                    <!-- door radiobuttons dezelde name te geven kan je ze niet allebei tegelijk aanduiden -->
+                    <li><input type="radio" name="carSleeper" value="yes" required>Ja</li>
+                    <li><input type="radio" name="carSleeper" value="no" required>Nee</li>
+                </ul>
+            </li>
+            <li>
+                <label>Hoe oud schat je de mol?</label>
+                <input type="number" id="age" value="" min="21" max="62" required>
+            </li>
+            <li>
+                 <label>Als de mol een e-mail adres heeft met volgend patroon: voornaam@demol.be; wat is dan zijn of haar e-mail adres?</label>
+                <input type="email" pattern="[\w.%+-]+@demol.be" value="" required>
+            </li>
+            <li>
+                <label>Argumenteer je antwoord</label>
+                <textarea name="answer" minlength="100" required></textarea>
+            </li>
+        </ul>
+        <button>Submit</button>
+        <script src="scripts/custom.js/"></script>
+</body>
+</html>
